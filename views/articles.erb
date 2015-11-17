@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Article Homepage</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <h1>Article list</h1>
+
+    <ol>
+      <% @article_array.each do |article| %>
+        <li><%= article.title %>
+          <ul>
+            <li><%= article.description %></li>
+            <li><a target="_blank" href="<%= article.url %>"><%= article.url %></a></li>
+          </ul>
+        </li>
+      <% end %>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Article</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+
+  <body>
+    <h1>Submit an awesome article</h1>
+
+    <!-- <h2><% if @error %><%= "Whoops! Please do it right this time" %><% end %></h2> -->
+
+    <form action="/articles" method="post">
+      <label for="title">Article Title:</label>
+      <input type="text" name="title" value="<%= @title %>" required>
+
+      <label for="description">Article Description:</label>
+      <input type="text" name="description" value="<%= @description %>" minlength=20 required>
+
+      <label for="url">Article URL:</label>
+      <input type="url" name="url" value="<%= @url %>" required>
+
+      <input type="submit">
+    </form>
+
+  </body>
+</html>
